@@ -1,0 +1,942 @@
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+q {
+  quotes: "\00ab" "\00bb"; 	
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.container {
+  min-width: 940px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Стили хедера*/
+.main-header {
+  background: #000000;
+  color: #ffffff;
+}
+
+.main-menu {
+  float: left;
+  width: 730px;
+  margin-left: 130px;
+}
+
+.main-menu .logo-inner {  /*Стиль логотипа на внутренней странице*/
+  float: left;
+  width: 110px;
+  height: 20px;
+}
+
+.main-menu .logo-inner:hover {
+  background: none;	
+}
+
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;	
+}
+
+.main-menu li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-menu a {
+  display: block;
+  padding: 26px 18px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-menu .logo-inner {
+  padding-right: 22px;
+}
+
+.main-menu a:hover {
+  background: #242424;
+}
+
+.main-menu-active {
+  position: relative;	
+}
+
+.main-menu-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  left: 20px;
+  right: 20px;
+  bottom: 0; 
+  background: #ffffff;
+}
+
+.user-block .main-menu-active::after {
+  left: 10px;
+  right: 10px;	
+}
+
+.main-menu-active a:hover {
+  background: none;	
+}
+.user-block {
+  float: right;
+  max-width: 140px;
+  margin-right: 130px;
+}
+
+.user-login {
+  display: inline-block;
+  position: relative;
+  padding: 25px 18px;
+  padding-left: 50px;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.user-login::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  left: 12px;
+  width: 18px;
+  height: 16px;
+  background: url("../img/icon-sprite.png") -3px -121px no-repeat transparent;
+  opacity: 0.3;    	
+}
+
+.user-login:hover {
+  background: #242424;
+}
+
+.user-login:hover::before {
+  opacity: 1;
+}
+
+/*Стили внутренних страниц */
+/*Заголовок страницы*/
+.inner-page {
+  background: url("../img/pattern-inner.png") #f8f3f0;
+  color: #000000;	
+}
+
+.inner-page-header {
+  margin: 0 130px;
+  margin-bottom: 45px;
+  padding-top: 30px;
+}
+
+.inner-page-header h1 {
+  margin-bottom: 15px;	
+}
+
+.inner-page-header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;	
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  padding-right: 39px;
+}
+
+.breadcrumbs a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;	
+}
+
+.breadcrumbs li::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  right: 15px;
+  background-color: #000000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.breadcrumbs .current a {
+  color: #aba9a7;	
+}
+
+.breadcrumbs .current a:hover {
+  text-decoration: none;	
+}
+
+.breadcrumbs .current::after {
+  display: none;	
+}
+
+/*Стили страницы CATALOG.html*/
+/*Боковая панель "Выбор товаров"*/
+.select-products {
+  float: left;
+  width: 210px;
+  margin-left: 130px;
+  padding-right: 10px;
+}
+
+.select-products h2 {
+  padding-top: 21px;
+  padding-bottom: 3px;
+}
+
+.select-products h2:first-child {
+  margin-top: 0;
+  padding-top: 0;	
+}
+
+.select-products input[type="checkbox"] {
+  display: none;
+}
+
+.select-products label:hover {
+  color: #663d15; 	
+}
+
+.select-products input[type="checkbox"] + .checkbox-indicator {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 23px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 2px solid #000000;	
+}
+
+.select-products input[type="checkbox"]:checked + .checkbox-indicator::before,
+.select-products input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 15px;
+  height: 0;
+  border: 1px solid #000000;
+}
+
+.select-products input[type="checkbox"]:checked + .checkbox-indicator::before {
+  -webkit-transform: rotate(45deg);	
+          transform: rotate(45deg);	
+}
+
+.select-products input[type="checkbox"]:checked + .checkbox-indicator::after {
+  -webkit-transform: rotate(-45deg);	
+          transform: rotate(-45deg);	
+}
+
+.select-products input[type="checkbox"] + .checkbox-indicator:hover,
+.select-products input[type="checkbox"] + .checkbox-indicator:hover::before,
+.select-products input[type="checkbox"] + .checkbox-indicator:hover::after {
+  border-color: #663d15;	
+}
+
+.select-products input[type="radio"] {
+  display: none;	
+}
+
+.select-products label {
+  position: relative;	
+}
+
+.select-products input[type="radio"] + label > span {
+ display: inline-block;
+ max-width: 140px;
+ padding-top: 5px;
+ vertical-align: top;
+ line-height: 20px;	
+}
+
+.select-products input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 23px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.select-products input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 7px;
+  left: 6px;
+  background-color: #000000;
+  border: 2px solid #000000;
+  border-radius: 50%;	
+}
+
+.select-products input[type="radio"] + label:hover::before {
+  border-color: #663d15;  	
+}
+
+.select-products input[type="radio"] + label:hover::after {
+  background-color: #663d15;
+  border-color: #663d15;	
+}
+
+.btn {
+  background: #000000;
+  color: #ffffff;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #663d15;
+}
+
+.btn-select {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 13px 30px;
+  font-size: 13px;
+  line-height: 18px;
+  border: none;
+}
+
+/*Каталог товаров*/
+.catalog {
+  float: right;
+  width: 700px;
+  margin-right: 130px;
+  padding-top: 7px;
+}
+
+.catalog-item {
+  display: inline-block;
+  width: 220px;
+  min-height: 290px;
+  margin-right: 16px;
+  margin-bottom: 15px;
+  vertical-align: top;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(133, 133, 133, 0.2);
+}
+
+.catalog-item:hover {
+ box-shadow: 
+   0 0 10px  rgba(133, 133, 133, 0.2),
+   0 0 10px  rgba(133, 133, 133, 0.2);
+} 
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.catalog-item > a {
+  color: #000000;
+  text-decoration: none;	
+}
+
+.catalog-item p {
+  margin: 0;
+  padding: 5px 15px;
+  line-height: 20px;
+}
+
+.catalog-item span {
+  text-transform: none;	
+}
+
+.product-price {
+  margin: 7px auto;
+  text-align: center;
+}
+
+.product-price span,
+.product-price .btn-buy {
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.product-price span {
+  box-sizing: border-box;
+  width: 110px;
+  background: #e5e5e5;
+}
+
+.product-price .btn-buy  {
+  box-sizing: border-box;
+  width: 78px;
+  margin-left: -4px;
+}
+
+.catalog-pagination {
+  min-width: 200px;
+  height: 50px;
+  margin-top: 27px;
+  clear: both;
+}
+
+.catalog-pagination a {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.catalog-pagination-current {
+  background: #ffffff;
+  color: #000000;
+}
+
+/*Стили страницы CATALOG-ITEM.html*/
+/*Галерея изображенний товара*/
+.product-item-gallery {
+  float: left;
+  width: 460px;
+  margin-top: 5px;
+  margin-left: 130px;
+  margin-right: 30px;
+  padding-right: 10px;	
+}
+
+.product-item-gallery img {
+  box-shadow: 0 0 10px rgba(133, 133, 133, 0.2);
+}
+
+.product-item-gallery img:hover {
+ box-shadow: 
+   0 0 10px  rgba(133, 133, 133, 0.2),
+   0 0 10px  rgba(133, 133, 133, 0.2);
+}
+
+.item-gallery-small {
+  margin-top: 20px;	
+}
+
+.item-gallery-small img {
+  margin-right: 17px;	
+}
+
+.item-gallery-small img:last-of-type {
+  margin-right: 0;	
+}
+
+/*Описание товара*/
+.product-item-descript {
+  float: right;
+  width: 388px;
+  margin-right: 130px;
+  padding-top: 25px;	
+}
+
+.product-item-code {
+  float: right;
+  max-width: 170px;
+  color: #aba9a7;  	
+}
+
+.product-item-descript p {
+  padding-top: 20px;	
+}
+
+.product-item-descript .product-price {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.product-item-descript h2 {
+  padding-top: 32px;
+  padding-bottom: 5px;	
+}
+
+.product-item-descript ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;	
+}
+
+.product-item-descript li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.product-item-descript li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 0;
+  background-color: #000000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);	
+}
+
+/*стили страницы PRICE.html*/
+
+.big-header {
+  margin: 0 130px;
+  margin-bottom: 40px;
+  padding-top: 35px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.big-header h2{
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.big-header h2:before,
+.big-header h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 9999px;
+  height: 2px;
+  top: 50%;
+  background-color: #000000; 
+}
+
+.big-header h2::before {
+  right: 100%;	
+}
+
+.big-header h2::after {
+  left: 100%;	
+}
+
+.inner-columns-1,
+.inner-columns-2 {
+  margin: 0 130px;	
+}
+
+.inner-column-left {
+  float: left;
+  width: 400px;
+}
+
+.custom-list-1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-list-1 li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.custom-list-1 li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 0;
+  background-color: #000000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);	
+}
+
+.inner-column-right {
+  float: right;
+  width: 460px;	
+}
+
+.prices-table {
+   width: 100%;
+   margin-top: 30px;
+   border-collapse: collapse;
+ 	
+}
+
+.prices-table td {
+  width: 50%;
+  padding: 7px 20px;
+  border: 2px solid #000000;	
+}
+
+.prices-table td:nth-child(2n) {
+  padding-left: 33px;
+  text-align: center;	
+}
+
+.inner-columns-2 {
+ margin-top: 30px;
+}
+
+/*Стили футера*/
+.main-footer {
+  margin-top: 40px;
+  padding-top: 55px;
+  padding-bottom: 40px;
+  background: 
+    -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 40px),
+    url(../img/background-2.png) #333333;
+  background: 
+    linear-gradient(to bottom, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 40px),
+    url(../img/background-2.png) #333333;
+  color: #ffffff;
+}
+
+.footer-contacts {
+  float: left;
+  min-width: 320px;
+  margin-left: 130px;
+  margin-right: 60px;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-contacts a:hover {
+  text-decoration: none;
+}
+
+.footer-social {
+  float: left;
+  width: 280px;
+  text-align: center;
+}
+
+.footer-social p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin: 0 2px;
+  font-size: 0;
+  vertical-align: top;
+  text-decoration: none;
+  background: url("../img/icon-sprite.png") no-repeat center #000000;
+}
+
+.social-btn-vk {
+  background-position: 7px 14px;
+}
+.social-btn-fb {
+  background-position: 8px -25px;
+}
+.social-btn-inst {
+  background-position: 10px -67px;
+}
+  
+.social-btn:hover {
+  background-color: #ffffff;
+}
+.social-btn-vk:hover {
+  background-position: -45px 14px;
+}
+.social-btn-fb:hover {
+  background-position: -44px -25px;
+}
+.social-btn-inst:hover {
+  background-position: -43px -66px;
+}
+
+.footer-copyright {
+  float: right;
+  max-width: 280px;
+  margin-right: 130px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.footer-copyright .btn {
+  margin-right: 0;
+  padding: 11px 20px;
+}
+
+.footer-copyright .btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*Всплывающие окна: логин пользователя и карта проезда*/
+@-webkit-keyframes bounce {
+  0%   {-webkit-transform: translateY(-2000px);transform: translateY(-2000px);}
+  70%  {-webkit-transform: translateY(50px);transform: translateY(50px);}
+  90%  {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
+@keyframes bounce {
+  0%   {-webkit-transform: translateY(-2000px);transform: translateY(-2000px);}
+  70%  {-webkit-transform: translateY(50px);transform: translateY(50px);}
+  90%  {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
+
+@-webkit-keyframes shake {
+0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
+10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
+}
+
+@keyframes shake {
+0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
+10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
+}
+
+.no-js-login {
+  width: 300px;
+  margin: 0 auto;
+  padding: 25px 80px;
+  background: url("../img/pattern-inner.png") #f8f3f0;
+  color: #000000;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7); 	
+}
+
+.modal-login {
+  display: none;
+  position: absolute;
+  width: 300px;
+  top: 120px;
+  left: 50%;
+  margin-left: -225px;
+  padding: 25px 80px;
+  background: url("../img/pattern-inner.png") #f8f3f0;
+  color: #000000;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7); 	
+}
+
+.no-js-map {
+  margin: 0 auto;
+  width: 766px;
+  height: 561px;
+  background: #e9e9dc;
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);	
+}
+
+.modal-map {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  width: 766px;
+  height: 561px;
+  margin-top: -280px;
+  margin-left: -390px;
+  background: #e9e9dc;
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);	
+}
+
+.modal-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;	
+}
+
+.modal-login h2 {
+  padding-top: 4px;
+  font-size: 30px;
+  line-height: 24px;  
+}
+
+.modal-error {
+-webkit-animation: shake 0.6s;
+        animation: shake 0.6s;
+}
+
+.modal-login-form {
+  margin-top: -4px;	
+}
+.modal-login-form input[type="text"],
+.modal-login-form input[type="password"] {
+  width: 240px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 7px 15px;
+  padding-right: 40px;
+  background: url("../img/icon-sprite.png") no-repeat right;
+  background-color: #f9f6f3;
+  color: #000000;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.modal-login-form input[type="text"] {
+  background-position: 265px -144px;
+}
+
+.modal-login-form input[type="password"] {
+  margin-bottom: 15px;
+  background-position: 265px -178px;	
+}
+
+.modal-login-form input:focus {
+  border-color: #663d15;	
+}
+
+.modal-login-form input[type="checkbox"] {
+  display: none;	
+}
+
+.modal-login-form .login-checkbox:hover {
+  color: #663d15; 	
+}
+
+.modal-login-form input[type="checkbox"] + .checkbox-indicator {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 2px solid #000000;	
+}
+
+.modal-login-form input[type="checkbox"]:checked + .checkbox-indicator::before,
+.modal-login-form input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 15px;
+  height: 0px;
+  border: 1px solid #000000;
+}
+
+.modal-login-form input[type="checkbox"]:checked + .checkbox-indicator::before {
+  -webkit-transform: rotate(45deg);	
+          transform: rotate(45deg);	
+}
+
+.modal-login-form input[type="checkbox"]:checked + .checkbox-indicator::after {
+  -webkit-transform: rotate(-45deg);	
+          transform: rotate(-45deg);	
+}
+
+.modal-login-form input[type="checkbox"] + .checkbox-indicator:hover,
+.modal-login-form input[type="checkbox"] + .checkbox-indicator:hover::before,
+.modal-login-form input[type="checkbox"] + .checkbox-indicator:hover::after {
+  border-color: #663d15;
+}
+
+.modal-login-form .restore {
+  float: right;
+  color: #000000;	
+}
+
+.modal-login-form .btn {
+  width: 100%;
+  margin-top: 14px;
+  margin-bottom: 27px;
+  padding: 10px 0;
+  outline: none;	
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -1px;
+  width: 27px;
+  height: 5px;
+  background-color: #d0d0d0;
+  border-radius:  1px;	
+}
+
+.modal-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
