@@ -41,20 +41,21 @@ h2 {
   color: #ffffff;
 }
 
-.main-menu {
-  float: left;
-  width: 730px;
-  margin-left: 130px;
-}
-
-.main-menu .logo-inner {  /*Стиль логотипа на внутренней странице*/
+.main-header .logo-inner {  /*Стиль логотипа на внутренней странице*/
   float: left;
   width: 110px;
   height: 20px;
+  margin-left: 130px;
+  padding: 26px 18px;
 }
 
-.main-menu .logo-inner:hover {
+.main-header .logo-inner:hover {
   background: none;	
+}
+
+.main-menu {
+  float: left;
+  width: 650px;
 }
 
 .main-menu ul {
@@ -71,14 +72,14 @@ h2 {
 
 .main-menu a {
   display: block;
-  padding: 26px 18px;
+  padding: 26px 19px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   text-decoration: none;
 }
 
-.main-menu .logo-inner {
+.main-header .logo-inner {
   padding-right: 22px;
 }
 
@@ -109,6 +110,7 @@ h2 {
 .main-menu-active a:hover {
   background: none;	
 }
+
 .user-block {
   float: right;
   max-width: 140px;
@@ -118,7 +120,7 @@ h2 {
 .user-login {
   display: inline-block;
   position: relative;
-  padding: 25px 18px;
+  padding: 25px 19px;
   padding-left: 50px;
   vertical-align: middle;
   font-size: 16px;
@@ -131,11 +133,11 @@ h2 {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 27px;
-  left: 12px;
   width: 18px;
   height: 16px;
-  background: url("../img/icon-sprite.png") -3px -121px no-repeat transparent;
+  top: 27px;
+  left: 20px;
+  background: url("../img/icon-sprite.png") -3px -125px no-repeat transparent;
   opacity: 0.3;    	
 }
 
@@ -158,6 +160,10 @@ h2 {
   margin: 0 130px;
   margin-bottom: 45px;
   padding-top: 30px;
+}
+
+.inner-header-price {  /*Нижний отступ шапки страницы price.html*/
+  margin-bottom: 10px;
 }
 
 .inner-page-header h1 {
@@ -221,8 +227,8 @@ h2 {
 }
 
 .select-products h2 {
-  padding-top: 21px;
-  padding-bottom: 3px;
+  padding-top: 15px;
+  padding-bottom: 2px;
 }
 
 .select-products h2:first-child {
@@ -232,6 +238,16 @@ h2 {
 
 .select-products input[type="checkbox"] {
   display: none;
+}
+
+.select-products ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;	
+}
+
+.select-products li {
+  padding-bottom: 13px;	
 }
 
 .select-products label:hover {
@@ -341,8 +357,8 @@ h2 {
 
 .btn-select {
   display: inline-block;
-  margin-top: 30px;
-  padding: 13px 30px;
+  margin-top: 35px;
+  padding: 12px 30px;
   font-size: 13px;
   line-height: 18px;
   border: none;
@@ -416,6 +432,7 @@ h2 {
   box-sizing: border-box;
   width: 78px;
   margin-left: -4px;
+  border: none;
 }
 
 .catalog-pagination {
@@ -525,8 +542,7 @@ h2 {
           transform: rotate(45deg);	
 }
 
-/*стили страницы PRICE.html*/
-
+/*Cтили страницы PRICE.html*/
 .big-header {
   margin: 0 130px;
   margin-bottom: 40px;
@@ -539,7 +555,7 @@ h2 {
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 25px;
   font-size: 48px;
   line-height: 48px;
 }
@@ -600,7 +616,8 @@ h2 {
 
 .inner-column-right {
   float: right;
-  width: 460px;	
+  width: 460px;
+  box-sizing: border-box;  
 }
 
 .prices-table {
@@ -622,14 +639,22 @@ h2 {
 }
 
 .inner-columns-2 {
- margin-top: 30px;
+ margin-top: 40px;
+}
+
+.inner-columns-2 h2 {
+  margin-bottom: 10px;;	
+}
+
+.inner-columns-2 .inner-column-right {
+  padding-right: 70px;
 }
 
 /*Стили футера*/
 .main-footer {
-  margin-top: 40px;
-  padding-top: 55px;
-  padding-bottom: 40px;
+  margin-top: 60px;
+  padding-top: 57px;
+  padding-bottom: 38px;
   background: 
     -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 40px),
     url(../img/background-2.png) #333333;
@@ -643,7 +668,7 @@ h2 {
   float: left;
   min-width: 320px;
   margin-left: 130px;
-  margin-right: 60px;
+  margin-right: 10px;
 }
 
 .footer-contacts a {
@@ -703,7 +728,7 @@ h2 {
 .footer-copyright {
   float: right;
   max-width: 280px;
-  margin-right: 130px;
+  margin-right: 132px;
 }
 
 .footer-copyright p {

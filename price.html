@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+  
   <body class="inner-page">
     <header class="main-header container clearfix">
+      <a class="logo-inner" href="index.html">
+        <img src="img/logo.png" width="110" height="20" alt="Барбершоп «Бородинский»">
+      </a>
       <nav class="main-menu">
-        <a class="logo-inner" href="index.html">
-          <img src="img/logo.png" width="110" height="20" alt="Барбершоп «Бородинский»">
-        </a>
         <ul>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
@@ -23,12 +24,12 @@
       </nav>
       
       <div class="user-block">
-        <a class="user-login" href="user-link.html">Вход</a>
+        <a class="user-login" href="no-js-user-link.html">Вход</a>
       </div>
     </header>
            
     <main class="container clearfix">
-      <div class="inner-page-header">
+      <div class="inner-page-header inner-header-price">
         <h1>Прайс-лист</h1>
         <ul class="breadcrumbs">
           <li><a href="index.html">Главная</a></li>
@@ -73,15 +74,16 @@
       <div class="inner-columns-2 container clearfix">
         <h2>Несколько слов о нас:</h2>
         <div class="inner-column-left">
-          <p>Наша парикмахерская занимается исключительно мужскими стрижками. 
-             Стрижка каждого клиента для нас — это уникальная и продуманная до мелочей работа.
-             Мы не работаем на количество, мы делаем качество.
+          <p>Наша парикмахерская занимается исключительно мужскими 
+		     стрижками. Стрижка каждого клиента для нас — это уникальная
+			 и продуманная до мелочей работа. Мы не работаем на
+			 количество, мы делаем качество.
           </p>
         </div>
         
         <div class="inner-column-right">
           <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку 
-             можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться 
+             можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться 
              в удобную для вас атмосферу, чувствовать себя комфортно и свободно!
           </p>
         </div>
@@ -92,7 +94,7 @@
       <div class="footer-contacts">
         Барбершоп «Бородинский»<br>
         Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-        <a class="open-map" href="map.html">Как нас найти?</a><br>
+        <a class="open-map" href="no-js-map.html">Как нас найти?</a><br>
         Телефон: +7 (812) 666-02-66
       </div>
 
@@ -120,7 +122,7 @@
           <span class="checkbox-indicator"></span>
           Запомните меня
         </label>
-        <a class="restore" href="map.html">Я забыл пароль</a>
+        <a class="restore" href="#">Я забыл пароль</a>
         <button class="btn" type="submit">Войти</button>
       </form>
       <button class="modal-close" type="button" title="Закрыть">Закрыть
